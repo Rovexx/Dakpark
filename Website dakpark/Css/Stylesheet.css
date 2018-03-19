@@ -24,3 +24,45 @@ body{
 .slide3{
 	background-color:red;
 }
+
+.part-50{
+	background-color:gray;
+	/*height:10vh;*/
+	width:50%;
+	float:right;
+}
+
+.body-score{
+	width:100%;
+	float:right;
+	background-color:red;
+}
+
+.headtitle{
+	color:#8dc63f;
+	font-weight:700;
+	font-family:"PT Sans";
+	text-align:center;
+	font-size:30pt;
+}
+
+.containernames{
+	float:left;
+	width:50%;
+	padding-left:10%;
+	background-color:purple;
+}
+
+.containerscore{
+	float:left;
+	width:30%;
+	padding-right:10%;
+}
+
+ul > li{
+	list-style-type:none;
+}
+
+ul{
+	padding:0px;
+}
