@@ -9,11 +9,12 @@ body{
 }
 
 .Slides{
-	display:block;
+	display:none;
 }
 
 .slide1{
 	background-color:green;
+	display:block;
 }
 
 .slide2{

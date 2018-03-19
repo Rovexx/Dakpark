@@ -1,7 +1,11 @@
 var StartSlide = 1;
 
+
 showSlides(StartSlide);
 
+function Timer() {
+    setInterval(function(){ showSlides(StartSlide += 1); }, 3000);
+}
 
 //Naar rechts en naar links scrollen
 function PlusSlide(Var) {
