@@ -32,10 +32,14 @@ body{
 	float:right;
 }
 
+.wrapper-right-score{
+	height:100vh;
+	background-color:#7D7D7D;
+}
+
 .body-score{
 	width:100%;
 	float:right;
-	background-color:red;
 }
 
 .headtitle{
@@ -50,7 +54,6 @@ body{
 	float:left;
 	width:50%;
 	padding-left:10%;
-	background-color:purple;
 }
 
 .containerscore{
@@ -65,4 +68,27 @@ ul > li{
 
 ul{
 	padding:0px;
+}
+
+.ol-eternal-score > li{
+	list-style-type:none;	
+}
+
+.paragraph{
+	font-family:"Roboto Slab";
+	font-size:20pt;
+	color:#543019;
+	padding-bottom:10px;
+}
+
+.bold-highscore{
+	font-weight:1000;
+}
+
+.paragraph-eternal-highscore{
+	font-family:"Roboto Slab";
+	font-size:25pt;
+	color:#543019;
+	padding-bottom:10px;
+	font-weight:1000;
 }
