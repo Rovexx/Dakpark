@@ -5,11 +5,16 @@ body{
 
 .container{
 	width:100%;
-	height:100%;
+	height:100vh;
+}
+
+.Slides{
+	display:none;
 }
 
 .slide1{
 	background-color:green;
+	display:block;
 }
 
 .slide2{
