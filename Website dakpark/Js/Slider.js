@@ -1,6 +1,5 @@
 var StartSlide = 1;
 
-
 showSlides(StartSlide);
 
 
