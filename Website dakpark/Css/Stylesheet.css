@@ -24,3 +24,71 @@ body{
 .slide3{
 	background-color:red;
 }
+
+.part-50{
+	background-color:gray;
+	/*height:10vh;*/
+	width:50%;
+	float:right;
+}
+
+.wrapper-right-score{
+	height:100vh;
+	background-color:#7D7D7D;
+}
+
+.body-score{
+	width:100%;
+	float:right;
+}
+
+.headtitle{
+	color:#8dc63f;
+	font-weight:700;
+	font-family:"PT Sans";
+	text-align:center;
+	font-size:30pt;
+}
+
+.containernames{
+	float:left;
+	width:50%;
+	padding-left:10%;
+}
+
+.containerscore{
+	float:left;
+	width:30%;
+	padding-right:10%;
+}
+
+ul > li{
+	list-style-type:none;
+}
+
+ul{
+	padding:0px;
+}
+
+.ol-eternal-score > li{
+	list-style-type:none;	
+}
+
+.paragraph{
+	font-family:"Roboto Slab";
+	font-size:20pt;
+	color:#543019;
+	padding-bottom:10px;
+}
+
+.bold-highscore{
+	font-weight:1000;
+}
+
+.paragraph-eternal-highscore{
+	font-family:"Roboto Slab";
+	font-size:25pt;
+	color:#543019;
+	padding-bottom:10px;
+	font-weight:1000;
+}
