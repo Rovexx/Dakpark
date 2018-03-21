@@ -34,10 +34,10 @@ void setup() {
   // Open serial communications and wait for port to open:
   Serial.begin(9600);
   // this check is only needed on the Leonardo:
-  while (!Serial) {
+  /*while (!Serial) {
     ; // wait for serial port to connect. Needed for native USB port only
   }
-
+  */
   // start the Ethernet connection:
   if (Ethernet.begin(mac) == 0) {
     Serial.println("Failed to configure Ethernet using DHCP");
