@@ -1,24 +1,58 @@
 body {
-    width: 100vw;
-    height: 50vh;
-    margin:0;
-    background: linear-gradient(rgba(255,255,255,0), rgba(0,0,0,1));
+    width:          100vw;
+    height:         50vh;
+    background:     lightgrey;
 }
 
 map > img {
-    width: 100vw;
-    height: auto;
-    position:fixed;
-    bottom:0px;
+    width:          100vw;
+    height:         auto;
+    position:       relative;
+    bottom:         0px;
+    margin:         0px;
 }
 
 .title{
-    color: black;
-    Margin-left: 20px;
-    font-weight: bold;
+    color:          black;
+    Margin-left:    10%;
+    font-weight:    bold;
 }
 
 .subtitle{
-    color: Grey;
-    font-weight: normal;
+    color:          Grey;
+    Margin-left:    10%;
+    font-weight:    normal;
+}
+
+.score{
+    color:          black;
+    Margin-left:    10%;
+    font-weight:    bold;
+}
+
+
+Marker{
+    animation:      rainbow 3s infinite;
+    width:          30px;
+    height:         30px;
+    border-radius:  50%;
+    position:       absolute;
+    top:10px;
+    left:10px;
+}
+
+@keyframes rainbow {
+    0% {
+        background-color: white;
+    }
+    50% {
+        background-color: red;
+    }
+    100% {
+        background-color: white;
+    }
+}
+
+#container {
+    position: relative;
 }
