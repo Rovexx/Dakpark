@@ -1,10 +1,13 @@
 var StartSlide = 1;
 
+var Time = 10000;
+
 
 showSlides(StartSlide);
 
 function Timer() {
-    setInterval(function(){ showSlides(StartSlide += 1); }, 3000);
+    setInterval(function(){ showSlides(StartSlide += 1); }, Time);
+  
 }
 
 //Naar rechts en naar links scrollen

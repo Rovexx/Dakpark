@@ -12,17 +12,13 @@ body{
 	display:none;
 }
 
+/*Slide 1*/
 .slide1{
-	background-color:green;
+    background-image: url('../img/dakpark.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
 	display:block;
-}
-
-.slide2{
-	background-color:yellow;
-}
-
-.slide3{
-	background-color:red;
 }
 
 .part-50{
@@ -34,16 +30,17 @@ body{
 
 .wrapper-right-score{
 	height:100vh;
-	background-color:#7D7D7D;
+	background-color:rgba(200,200,200,0.75);
 }
 
 .body-score{
 	width:100%;
 	float:right;
+	padding-bottom:30px;
 }
 
 .headtitle{
-	color:#8dc63f;
+	color:#69942F;
 	font-weight:700;
 	font-family:"PT Sans";
 	text-align:center;
@@ -71,7 +68,12 @@ ul{
 }
 
 .ol-eternal-score > li{
-	list-style-type:none;	
+	list-style-type:none;
+
+}
+
+.ol-eternal-score{
+	padding-left:0px;
 }
 
 .paragraph{
@@ -91,4 +93,81 @@ ul{
 	color:#543019;
 	padding-bottom:10px;
 	font-weight:1000;
+}
+
+/*Slide 2*/
+.slide2{
+	/*background-color:yellow;*/
+}
+
+.part-70-slide2{
+	float:right;
+	width:70%;
+	height:100%;
+}
+
+.paragraph-playrules{
+	font-family:"Roboto Slab";
+	font-size:25pt;
+	color:#543019;
+	padding-bottom:10px;
+	font-weight:1000;
+	margin-right:2%;
+}
+
+.body-playrules{
+	background-color:rgba(200,200,200,0.75);
+}
+
+.part-30-slide2{
+	width:30%;
+	height:100%;
+	background-image: url('../Img/train.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right; 
+    float:left;
+}
+
+ol{
+	margin-left:30px;
+}
+
+/*Slide 3*/
+.slide3{
+	background-color:red;
+}
+
+.slide3-body{
+	width:100%;
+	height:100%;
+}
+
+.image_slide3{
+	width:200px;
+	height:200px;
+	border-radius:2px;
+	border:3px solid rgb(200,200,200);
+	margin-left:20px;
+	margin-bottom:20px;
+}
+
+.headtitle-slide3{
+	color:#69942F;
+	font-weight:700;
+	font-family:"PT Sans";
+	text-align:center;
+	font-size:30pt;
+	padding-top:30pt;
+	margin-top:0px;
+}
+
+.paragraph-API{
+	font-family:"Roboto Slab";
+	font-size:25pt;
+	color:#543019;
+	padding-bottom:10px;
+	font-weight:1000;
+	margin-left:20px;
+	margin-bottom:5px;
 }
