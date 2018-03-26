@@ -1,7 +1,9 @@
 body {
     width:          100vw;
-    height:         50vh;
-    background:     lightgrey;
+    height:         100vh;
+    margin:         0px;
+    background-image:linear-gradient(-80deg, white 40%, lightgrey 40%);
+    font-family:    "Segoe UI";
 }
 
 map > img {
@@ -12,10 +14,16 @@ map > img {
     margin:         0px;
 }
 
+map {
+    position:       fixed;
+    bottom:         0px;
+}
+
 .title{
     color:          black;
     Margin-left:    10%;
     font-weight:    bold;
+    text-shadow:    4px 4px 10px grey;
 }
 
 .subtitle{
@@ -32,16 +40,18 @@ map > img {
 
 
 Marker{
-    animation:      rainbow 3s infinite;
-    width:          30px;
-    height:         30px;
+    animation:      colorChange 3s infinite;
+    width:          2%;
+    height:         auto;
+    padding-top:    2%;
     border-radius:  50%;
     position:       absolute;
-    top:10px;
-    left:10px;
+    top:            10px;
+    left:           10px;
+    margin:         0px;
 }
 
-@keyframes rainbow {
+@keyframes colorChange {
     0% {
         background-color: white;
     }
@@ -54,5 +64,7 @@ Marker{
 }
 
 #container {
-    position: relative;
+    position:       relative;
+    bottom:         0px;
+    margin:         0px;
 }

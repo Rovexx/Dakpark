@@ -24,7 +24,6 @@ while($row = mysqli_fetch_assoc($result))
     $location[] = $row;
 }
 mysqli_close($conn);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,16 +40,43 @@ mysqli_close($conn);
         <h4 class="subtitle">Interactive Installation</h4>
     </div>
     <div class="score">
-        <h1>De huidige score is:</h1>
-        <br>
-        <h2><?= $score[0]["score"] ?></h2>
+        <h1>De huidige score is: <?= $score[0]["score"] ?></h1>
     </div>
     <div id="container">
         <map>
             <img src="images/Darkpark.png" alt="Dakpark Background">
-            <marker></marker>
+            <marker id="marker">
+                <script>
+                    <?php   // locatie 1
+                    if ($location[0]["location"] == 0){
+                    ?>
+                    document.getElementById("marker").style.top = "67%";
+                    document.getElementById("marker").style.left = "21%";
+                    <?php } ?>
+
+                    <?php   // locatie 2
+                    if ($location[0]["location"] == 1){
+                            ?>
+                    document.getElementById("marker").style.top = "73%";
+                    document.getElementById("marker").style.left = "50%";
+                    <?php } ?>
+
+                    <?php   // locatie 3
+                    if ($location[0]["location"] == 2){
+                    ?>
+                    document.getElementById("marker").style.top = "0%";
+                    document.getElementById("marker").style.left = "50%";
+                    <?php } ?>
+
+                    <?php   // locatie 4
+                    if ($location[0]["location"] == 3){
+                    ?>
+                    document.getElementById("marker").style.top = "35%";
+                    document.getElementById("marker").style.left = "9.4%";
+                    <?php } ?>
+                </script>
+            </marker>
         </map>
     </div>
 </body>
-
 </html>
