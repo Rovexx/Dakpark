@@ -7,6 +7,18 @@ body {
     overflow:       hidden;
 }
 
+logo > img {
+    width;          5%;
+    height:         auto;
+    position:       relative;
+}
+
+logo {
+    position:       fixed;
+    top:            15%;
+    right:          10%;
+}
+
 map > img {
     width:          100vw;
     height:         auto;
@@ -20,11 +32,11 @@ map {
     bottom:         0px;
 }
 
-.text{
+.text {
     margin-left:    7%;
 }
 
-#title{
+#title {
     color:          black;
     font-weight:    bold;
     font-size:      40px;
@@ -32,25 +44,25 @@ map {
     margin-bottom:  0%;
 }
 
-#subtitle{
+#subtitle {
     color:          Grey;
     Margin-top:     0.5%;
     font-weight:    normal;
 }
 
-#score{
+#score {
     color:          black;
     font-weight:    bold;
 }
 
-#location{
+#location {
     margin-bottom:     20%;
     position:       fixed;
     bottom:         0px;
 }
 
 
-Marker{
+Marker {
     animation:      colorChange 3s infinite;
     width:          2%;
     height:         auto;
