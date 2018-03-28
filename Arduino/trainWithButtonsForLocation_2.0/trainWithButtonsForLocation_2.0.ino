@@ -232,7 +232,7 @@ void sendScore()
 void sendLocation()
 {
   // add variable to the base string that we need to send
-  String stringToSend = baseStringLocation + score;
+  String stringToSend = baseStringLocation + loc;
   stringToSend = stringToSend + endString;
 
   //send via get
