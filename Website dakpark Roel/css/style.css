@@ -2,8 +2,9 @@ body {
     width:          100vw;
     height:         100vh;
     margin:         0px;
-    background-image:linear-gradient(-80deg, white 40%, lightgrey 40%);
+    background-image:linear-gradient(-80deg, white 40%, grey 40%, lightgrey 40%);
     font-family:    "Segoe UI";
+    overflow:       hidden;
 }
 
 map > img {
@@ -19,23 +20,33 @@ map {
     bottom:         0px;
 }
 
-.title{
-    color:          black;
-    Margin-left:    10%;
-    font-weight:    bold;
-    text-shadow:    4px 4px 10px grey;
+.text{
+    margin-left:    7%;
 }
 
-.subtitle{
+#title{
+    color:          black;
+    font-weight:    bold;
+    font-size:      40px;
+    text-shadow:    4px 4px 10px grey;
+    margin-bottom:  0%;
+}
+
+#subtitle{
     color:          Grey;
-    Margin-left:    10%;
+    Margin-top:     0.5%;
     font-weight:    normal;
 }
 
-.score{
+#score{
     color:          black;
-    Margin-left:    10%;
     font-weight:    bold;
+}
+
+#location{
+    margin-bottom:     20%;
+    position:       fixed;
+    bottom:         0px;
 }
 
 
