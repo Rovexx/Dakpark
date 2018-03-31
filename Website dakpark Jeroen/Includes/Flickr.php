@@ -33,7 +33,7 @@ class Flickr
      * @param $format
      * @return mixed|null
      */
-    public function search($keyword = null, $userId = null, $perPage = 5, $format = 'php_serial')
+    public function search($keyword = null, $userId = null, $perPage = 10, $format = 'php_serial')
     {
         $params = [
             'method' => 'flickr.photos.search',

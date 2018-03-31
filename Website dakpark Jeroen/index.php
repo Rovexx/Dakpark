@@ -1,5 +1,16 @@
 <?php
 	require_once("Includes/FlickrAPI.php");
+	require_once("Includes/Connection.php");
+	$queryEternal = "SELECT ID, Naam, max(Score) FROM Scores";
+	$queryresult = mysqli_query($connect, $queryEternal);
+	$Result;
+									
+	while ($Result = mysqli_fetch_assoc($queryresult)) {
+		$EternalNaam = $Result['Naam'];
+		$EternalScore = $Result['max(Score)'];
+	}
+	//SELECT * FROM `Scores` WHERE Datum = CURRENT_DATE ORDER BY Score DESC LIMIT 3
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,21 +24,21 @@
 		<title>Website Dakpark</title>
 	</head>
 	<body>
-	  	<div class="slide1 container Slides">
+	  	 <div class="slide1 container Slides">
 			<div class="part-50 wrapper-right-score">
 				<h1 class="headtitle">Highscore allertijden:</h1>
 				<div class="body-score">
 					<div class="containernames">
 						<p class="paragraphnames">
 							<ol class="ol-eternal-score">
-								<li class="paragraph-eternal-highscore">Jantje</li>
+								<li class="paragraph-eternal-highscore"><?=$EternalNaam;?></li>
 							</ol>
 						</p>
 					</div>
 					<div class="containerscore">
 						<p class="paragraphscore">
 							<ul>
-								<li class="paragraph-eternal-highscore">999</li>
+								<li class="paragraph-eternal-highscore"><?=$EternalScore;?></li>
 							</ul>
 						</p>
 					</div>
@@ -36,20 +47,36 @@
 				<div class="body-score">
 					<div class="containernames">
 						<p class="paragraphnames">
+							<?php
+									$queryDay = "SELECT * FROM `Scores` WHERE Datum = CURRENT_DATE ORDER BY Score DESC LIMIT 3";
+									$queryDay = mysqli_query($connect, $queryDay);
+									$ResultDay;
+									while ($Result = mysqli_fetch_assoc($queryDay)) {
+										$DayNaam = $Result['Naam'];
+										$DayScore = $Result['Score'];
+									?>
 							<ol>
-								<li class="paragraph bold-highscore">Karel</li>
-								<li class="paragraph">Pieter</li>
-								<li class="paragraph">Jacob</li>
+								<li class="paragraph">
+									<?php
+										echo $DayNaam;
+									?>	
+								</li>
 							</ol>
 						</p>
 					</div>
 					<div class="containerscore">
 						<p class="paragraphscore">
 							<ul>
-								<li class="paragraph bold-highscore">30</li>
-								<li class="paragraph">20</li>
-								<li class="paragraph">10</li>
+								<li class="paragraph">
+									<?php
+									echo $DayScore;
+									?>		
+								</li>
 							</ul>
+							<?php
+									}
+								mysqli_close($connect);
+							?>
 						</p>
 					</div>
 				</div>
@@ -75,8 +102,17 @@
 		</div>
 		<div class="slide3 container Slides">
 			<div class="slide3-body">
-				<h1 class="headtitle-slide3">Social Media:</h1>
-				<p class="paragraph-API">Flickr:</p>
+				<h1 class="headtitle headtitle-slide3">Tweet of the day:</h1>
+				<div class="tweet-style">
+				<?php
+					require_once("Includes/Twitter/index.php");
+				?>
+				</div>
+			</div> 
+		</div>
+		<div class="slide4 container Slides">
+			<div class="slide4-body">
+				<h1 class="headtitle headtitle-slide4">Flickr:</h1>
 				<?php
 				foreach ($imgsrc as $value){
 					foreach($value as $key){
@@ -84,9 +120,6 @@
 				<img src= "<?=$key?>" class="image_slide3"?>
 				<?php
 					}}
-				?>
-				<?php
-					require_once("Includes/Twitter/index.php");
 				?>
 			</div> 
 		</div>

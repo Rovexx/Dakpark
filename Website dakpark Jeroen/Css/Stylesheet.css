@@ -14,7 +14,7 @@ body{
 
 /*Slide 1*/
 .slide1{
-    background-image: url('../img/dakpark.jpg');
+    background-image: url('../Img/dakpark.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
@@ -135,7 +135,7 @@ ol{
 
 /*Slide 3*/
 .slide3{
-	background-color:red;
+	background-color:rgba(200,200,200,0.75);
 }
 
 .slide3-body{
@@ -152,16 +152,6 @@ ol{
 	margin-bottom:20px;
 }
 
-.headtitle-slide3{
-	color:#69942F;
-	font-weight:700;
-	font-family:"PT Sans";
-	text-align:center;
-	font-size:30pt;
-	padding-top:30pt;
-	margin-top:0px;
-}
-
 .paragraph-API{
 	font-family:"Roboto Slab";
 	font-size:25pt;
@@ -170,4 +160,65 @@ ol{
 	font-weight:1000;
 	margin-left:20px;
 	margin-bottom:5px;
+}
+
+.slide4{
+	background-color:rgba(200,200,200,0.75);
+}
+
+
+@media(max-width:640px){
+	/*Slide 1*/
+	.headtitle, .paragraph, .paragraph-eternal-highscore{
+		font-size:1.4em !important;
+	}
+
+	.headtitle{
+		margin-bottom:0px;
+	}
+
+	.body-score{
+		padding-bottom:10px;
+	}
+
+	.paragraph{
+		padding-bottom:5px;
+	}
+
+	/*Slide 2*/
+	.paragraph-playrules{
+		font-size:1em;
+	}
+
+	/*Slide 3*/
+	.headtitle-slide3{
+		margin-top:0px;
+		padding-top:5px;
+	}
+
+	.image_slide3{
+		width:100px;
+		height:100px;
+		border:2px solid rgb(200,200,200);
+		margin-left:16px;
+		margin-bottom:16px;
+	}
+
+	.tweet-style{
+		margin-left:65px;
+		margin-top:25px;
+	}
+
+	/*Slide 4*/
+	.headtitle-slide4{
+		margin-top:0px;
+		padding-top:5px;
+		padding-bottom:20px;
+	}
+
+	.paragraph-API{
+		font-size:1em;
+		margin-left: 20px;
+		margin-top: 5px;
+	}
 }

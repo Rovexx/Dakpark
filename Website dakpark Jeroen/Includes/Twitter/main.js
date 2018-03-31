@@ -7,17 +7,19 @@ reqwest({
 
 function successHandler(data){
 console.log(data.statuses)
-for(let i = 0; i < 3; i++){
+let i = 0;
+// for(let i = 0; i < 3; i++){
     //ID van Tweet ophalen
     var ID_Tweet =  data.statuses[i].id_str
     
     //De twittergebruiker ophalen 
     var Twitter_gebruiker = data.statuses[i].entities.user_mentions['0'].screen_name
-    console.log(data.statuses[i])
+    //console.log(data.statuses[i])
     
     //String met link opbouwen
     var link_tweet = "https://publish.twitter.com/oembed?url=https://twitter.com/" + Twitter_gebruiker + "/status/" + ID_Tweet + ""
     //console.log(link_tweet)
+
     //Twitter element opzoeken
     var elementID = "twitterlink" + i
     // console.log(elementID)
@@ -25,8 +27,7 @@ for(let i = 0; i < 3; i++){
     var twitter_element = document.getElementById(elementID)
     twitter_element.href = link_tweet
 
-    //console.log(link_tweet)
-}
+//}
 
 loadScript("https://platform.twitter.com/widgets.js")
 
