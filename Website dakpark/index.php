@@ -13,7 +13,7 @@
 		<title>Website Dakpark</title>
 	</head>
 	<body>
-	<!--  	<div class="slide1 container Slides">
+	  	<div class="slide1 container Slides">
 			<div class="part-50 wrapper-right-score">
 				<h1 class="headtitle">Highscore allertijden:</h1>
 				<div class="body-score">
@@ -72,7 +72,7 @@
 						</ol>
 					</p>
   			</div>
-		</div> -->
+		</div>
 		<div class="slide3 container Slides">
 			<div class="slide3-body">
 				<h1 class="headtitle-slide3">Social Media:</h1>
@@ -84,6 +84,9 @@
 				<img src= "<?=$key?>" class="image_slide3"?>
 				<?php
 					}}
+				?>
+				<?php
+					require_once("Includes/Twitter/index.php");
 				?>
 			</div> 
 		</div>
