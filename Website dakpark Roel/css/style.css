@@ -47,12 +47,19 @@ map {
 #subtitle {
     color:          Grey;
     Margin-top:     0.5%;
+    Margin-bottom:  2%;
     font-weight:    normal;
+}
+
+#teamname {
+    Margin-top:     0%;
+    Margin-bottom:  0%;
 }
 
 #score {
     color:          black;
     font-weight:    bold;
+    Margin-top:     0%;
 }
 
 #location {
@@ -61,6 +68,9 @@ map {
     bottom:         0px;
 }
 
+#nameForm {
+
+}
 
 Marker {
     animation:      colorChange 3s infinite;

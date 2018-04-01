@@ -2,25 +2,31 @@
 include_once 'dbh.php';
 $returnData = [];
 
-$query = "SELECT * FROM currentscore";
+// score ophalen
+$query = "SELECT score FROM currentinfo";
 $result = mysqli_query($conn, $query)
     or die('Error '.mysqli_error($conn).' with query '.$query);
-// data in variabele zetten
 
-// sql data in de array zetten
 $rs = mysqli_fetch_array($result);
 $returnData['score'] = $rs['score'];
 
 
-$query = "SELECT * FROM currentlocation";
+// locatie ophalen
+$query = "SELECT location FROM currentinfo";
 $result = mysqli_query($conn, $query)
 or die('Error '.mysqli_error($conn).' with query '.$query);
-// data in variabele zetten
 
-// sql data in de array zetten
 $rs = mysqli_fetch_array($result);
 $returnData['location'] = $rs['location'];
 
+
+// team naam ophalen
+$query = "SELECT teamname FROM currentinfo";
+$result = mysqli_query($conn, $query)
+or die('Error '.mysqli_error($conn).' with query '.$query);
+
+$rs = mysqli_fetch_array($result);
+$returnData['teamname'] = $rs['teamname'];
 
 header("Content-Type: application/json");
 echo json_encode($returnData);

@@ -12,6 +12,7 @@ function updatePage() {
         console.log('de locatie is ' + data.location)
         dataShowScore(data);
         dataShowLocation(data);
+        dataShowTeamName(data);
     }
 
     function errorHandler(error) {
@@ -23,6 +24,13 @@ function updatePage() {
         document.getElementById("score").innerHTML = "huidige score: " + data.score;
         //debug
         console.log("updating score");
+    }
+
+    //show teamname
+    function dataShowTeamName(data) {
+        document.getElementById("teamname").innerHTML = "Team naam: " + data.teamname;
+        //debug
+        console.log("updating teamname");
     }
 
     //show location
