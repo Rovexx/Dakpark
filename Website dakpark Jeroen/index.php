@@ -16,8 +16,8 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="Css/Stylesheet.css" type="text/css"/>
-		<script type="text/javascript" src="Js/Slider.js">
-		</script>
+	<!-- 	<script type="text/javascript" src="Js/Slider.js">
+		</script> -->
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto+Slab" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -45,38 +45,31 @@
 				</div>
 				<h1 class="headtitle">Dag score:</h1>
 				<div class="body-score">
-					<div class="containernames">
-						<p class="paragraphnames">
-							<?php
-									$queryDay = "SELECT * FROM `Scores` WHERE Datum = CURRENT_DATE ORDER BY Score DESC LIMIT 3";
-									$queryDay = mysqli_query($connect, $queryDay);
-									$ResultDay;
-									while ($Result = mysqli_fetch_assoc($queryDay)) {
-										$DayNaam = $Result['Naam'];
-										$DayScore = $Result['Score'];
-									?>
+					<div class="container-scores">
+						<p class="paragraphscores">
 							<ol>
-								<li class="paragraph">
-									<?php
-										echo $DayNaam;
-									?>	
+								<?php
+									$queryScore = "SELECT ID, Naam, Score FROM `scores` WHERE Datum = CURRENT_DATE Order by Score DESC LIMIT 3";
+									$queryScoreResult = mysqli_query($connect, $queryScore);
+									$ResultScore;
+									$Counter = 0;
+									while ($ResultScore = mysqli_fetch_assoc($queryScoreResult)) {
+										$Counter ++;
+										$DayNaam = $Counter. ". " .$ResultScore['Naam'];
+										$DayScore = $ResultScore['Score'];
+								?>
+								<li class="listnames">
+								<?php echo $DayNaam; ?>
 								</li>
-							</ol>
-						</p>
-					</div>
-					<div class="containerscore">
-						<p class="paragraphscore">
-							<ul>
-								<li class="paragraph">
-									<?php
-									echo $DayScore;
-									?>		
+								<li class="listscore">
+								<?php echo $DayScore;?>
 								</li>
-							</ul>
-							<?php
+								<?php
 									}
+									$Counter = 0;
 								mysqli_close($connect);
-							?>
+								?>
+							</ol>
 						</p>
 					</div>
 				</div>

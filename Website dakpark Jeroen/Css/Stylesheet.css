@@ -63,20 +63,34 @@ ul > li{
 	list-style-type:none;
 }
 
-ul{
+ol{
 	padding:0px;
+	list-style-type: none;
 }
 
-.ol-eternal-score > li{
+.listscore{
 	list-style-type:none;
+	text-align:center;
+}
 
+.paragraphscore, .container-scores{
+	width:100%;
+}
+
+.listnames{
+	padding:0px;
 }
 
 .ol-eternal-score{
 	padding-left:0px;
 }
 
-.paragraph{
+.listscore, .listnames{
+	width:50%;
+	float:left;
+}
+
+.paragraph, .listscore, .listnames{
 	font-family:"Roboto Slab";
 	font-size:20pt;
 	color:#543019;
