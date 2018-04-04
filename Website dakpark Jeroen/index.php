@@ -1,13 +1,13 @@
 <?php
 	require_once("Includes/FlickrAPI.php");
 	require_once("Includes/Connection.php");
-	$queryEternal = "SELECT ID, Naam, max(Score) FROM Scores";
+	$queryEternal = "SELECT id, teamnaam, max(score) FROM highscores";
 	$queryresult = mysqli_query($connect, $queryEternal);
 	$Result;
 									
 	while ($Result = mysqli_fetch_assoc($queryresult)) {
-		$EternalNaam = $Result['Naam'];
-		$EternalScore = $Result['max(Score)'];
+		$EternalNaam = $Result['teamnaam'];
+		$EternalScore = $Result['max(score)'];
 	}
 	//SELECT * FROM `Scores` WHERE Datum = CURRENT_DATE ORDER BY Score DESC LIMIT 3
 
@@ -16,8 +16,8 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="Css/Stylesheet.css" type="text/css"/>
-	<!-- 	<script type="text/javascript" src="Js/Slider.js">
-		</script> -->
+		<script type="text/javascript" src="Js/Slider.js">
+		</script>
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto+Slab" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -49,14 +49,14 @@
 						<p class="paragraphscores">
 							<ol>
 								<?php
-									$queryScore = "SELECT ID, Naam, Score FROM `scores` WHERE Datum = CURRENT_DATE Order by Score DESC LIMIT 3";
+									$queryScore = "SELECT id, teamnaam, score FROM `highscores` WHERE datum = CURRENT_DATE Order by score DESC LIMIT 3";
 									$queryScoreResult = mysqli_query($connect, $queryScore);
 									$ResultScore;
 									$Counter = 0;
 									while ($ResultScore = mysqli_fetch_assoc($queryScoreResult)) {
 										$Counter ++;
-										$DayNaam = $Counter. ". " .$ResultScore['Naam'];
-										$DayScore = $ResultScore['Score'];
+										$DayNaam = $Counter. ". " .$ResultScore['teamnaam'];
+										$DayScore = $ResultScore['score'];
 								?>
 								<li class="listnames">
 								<?php echo $DayNaam; ?>

@@ -61,7 +61,7 @@ class Flickr
         $images = [];
 
         foreach ($data['photos']['photo'] as $photo) {
-            $images[] = 'http://farm' . $photo['farm'] . '.static.flickr.com/' . $photo['server'] . '/' . $photo['id'] . '_' . $photo['secret'] . '.jpg';
+            $images[] = 'https://farm' . $photo['farm'] . '.static.flickr.com/' . $photo['server'] . '/' . $photo['id'] . '_' . $photo['secret'] . '.jpg';
         }
 
         return $images;
