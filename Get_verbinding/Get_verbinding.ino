@@ -4,7 +4,7 @@
 // mac adres
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 // website to get to
-char server[] = "localhost/arduino/includes/importData.php";
+char server[] = "dakpark.jeroenvanderrhee.nl/trein/includes/importData.php";
 // string to send via get
 String baseStringScore = "GET /?score=";
 String baseStringLocation = "GET /?location=";
@@ -14,7 +14,7 @@ IPAddress ip(192, 168, 137, 177);
 EthernetClient client;
 
 int loc = 0;
-int score = 244;
+int score = 666;
 void setup() 
 {
   // Open serial communications and wait for port to open:
@@ -63,7 +63,7 @@ void sendScore()
   if (client.connect(server, 80)) {
     Serial.println("connected");
     client.println(stringToSend);
-    client.println("Host: localhost/arduino/includes/importData.php");
+    client.println("Host: dakpark.jeroenvanderrhee.nl/trein/includes/importData.php");
     client.println("Connection: close");
     client.println();
   } 
@@ -86,7 +86,7 @@ void sendLocation()
   if (client.connect(server, 80)) {
     Serial.println("connected");
     client.println(stringToSend);
-    client.println("Host: localhost/arduino/includes/importData.php");
+    client.println("Host: dakpark.jeroenvanderrhee.nl/trein/includes/importData.php");
     client.println("Connection: close");
     client.println();
   } 
